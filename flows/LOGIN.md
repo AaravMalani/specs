@@ -37,6 +37,16 @@ flowchart TD
     F --> D
 
     D -->|User clicks register| G([Go to register page])
+
+    D -->|User clicks Google SSO button| M[Go to Google's sign in page]
+
+    M -->|User signs in with their Google account| N[Go to Google SSO redirect URI]
+    
+    N --> O{Does the user have a valid account?}
+    
+    O -->|Yes| H
+    
+    O -->|No| P([Go to Google SSO handler for the registration page])
 ```
 
 ## Limitations
