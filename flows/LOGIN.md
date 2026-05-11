@@ -8,7 +8,15 @@ flowchart TD
 
     B -->|Yes| C([Go to the home page])
 
-    B -->|No| D[Display the login form]
+    B -->|No| K{Does the user have a valid passkey?}
+
+    K -->|Yes| L[Ask the user whether they want to sign in with the passkey]
+
+    K -->|No| D[Display the login form]
+
+    L -->|User clicks no| D
+
+    L -->|User clicks yes| C
 
     D -->|User clicks the login button| E{Is the form data valid?}
 
