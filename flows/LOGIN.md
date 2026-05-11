@@ -14,9 +14,19 @@ flowchart TD
 
     E -->|No| F[Show an error]
 
-    F --> D
+    E -->|Yes| H{Does the user have 2FA enabled}
 
-    E -->|Yes| C
+    H -->|Yes| I[Prompt the user for the TOTP code]
+
+    H -->|No| C
+
+    I --> J{Is the code valid?}
+
+    J -->|Yes| C
+
+    J -->|No| I
+
+    F --> D
 
     D -->|User clicks register| G([Go to register page])
 ```
