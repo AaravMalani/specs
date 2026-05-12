@@ -8,7 +8,8 @@ The login process checks
 
 If any of these conditions are satisfied, the user is logged in.
 
-## Flowchart
+## Flowcharts
+### Main Login Flow
 ```mermaid
 flowchart TD
 
@@ -55,10 +56,50 @@ flowchart TD
     O -->|Yes| H
     
     O -->|No| P([Go to Google SSO handler for the registration page])
+
+    D -->|User clicks Forgot Password| Q([Go to forgot password page])
+```
+
+### Forgot Password Flow
+```mermaid
+flowchart TD
+    A[Page Opens] --> B{Is the user logged in}
+
+    B -->|Yes| C([Go to the Profile section of settings])
+
+    B -->|No| D[Display the Forgot Password page]
+
+    D -->|User clicks Submit| E[Send a magic link to the mentioned email, if an account exists]
+
+    E --> F([Display a success message])
+```
+
+```mermaid
+flowchart TD
+    A[User opens magic link]
+
+    A --> B{Is the link valid?}
+    
+    B -->|Yes| C[Display the password reset page]
+    
+    B -->|No| D([Go to the home page])
+    
+    C -->|User clicks Submit| E{Does the user have 2FA enabled}
+
+    E -->|Yes| F[Prompt the user for the TOTP code]
+
+    E -->|No| D
+
+    F --> G{Is the code valid?}
+
+    G -->|Yes| D
+
+    G -->|No| F
+
+
 ```
 
 ## Limitations
 - Only covers Google SSO, since other providers have a similar user flow.
 - The login flow doesn't consider multiple incorrect credential attempts.
-- The flow does not include an option for a forgotten password.
 - The flow does not redirect users back to the page where they came from, instead opting to redirect them to the home page.
