@@ -15,7 +15,7 @@ flowchart TD
 
     A[Page opens] --> B{Is the user logged in?}
 
-    B -->|Yes| C([Go to the home page])
+    B -->|Yes| C([Go to the previous page])
 
     B -->|No| K{Does the user have a valid passkey?}
 
@@ -102,4 +102,3 @@ flowchart TD
 ## Limitations
 - Only covers Google SSO, since other providers have a similar user flow.
 - The login flow doesn't consider multiple incorrect credential attempts.
-- The flow does not redirect users back to the page where they came from, instead opting to redirect them to the home page.
