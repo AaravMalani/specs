@@ -101,4 +101,4 @@ flowchart TD
 
 ## Limitations
 - Only covers Google SSO, since other providers have a similar user flow.
-- The login flow doesn't consider multiple incorrect credential attempts.
+- The login flow doesn't consider multiple incorrect credential attempts. In the actual app, five invalid attempts will block the user for 15 minutes from logging into the app.
