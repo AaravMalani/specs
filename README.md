@@ -12,11 +12,13 @@ This repository contains the specifications and designs for our app
 │   ├── TEMPLATE.md  # Contains a template of screen designs
 │   ├── README.md    # Contains the specification of screen designs 
 │   └── ...
-├── api         # Contains YAML files which describe the API details using the OpenAPI specification
+├── api 
 │   ├── README.md   
-│   ├── openapi.yaml # The root OpenAPI document which imports all other YAML documents
-│   ├── auth.yaml    # Contains the auth-related API endpoint documentation
-│   └── ...   
+│   ├── openapi.yaml        # The root OpenAPI document which imports all other YAML documents
+│   ├── paths               # Each YAML file in a subdirectory corresponds to the definition of a specific API endpoint path
+│   │   └── ...
+│   └── schema              # Each YAML file consists of a reusable OpenAPI schema model (e.g. a User model)
+│       └── ...  
 └── infra       # Contains MD files which describe an aspect of the future infrastructure deployment
     ├── README.md    # Contains the infrastructure specifications
     └── ...

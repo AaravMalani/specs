@@ -15,9 +15,11 @@ The documents are stored in the current `api/` directory
 ```
 api 
 ├── README.md   
-├── openapi.yaml           # The root OpenAPI document which imports all other YAML documents
-├── auth.yaml              # Contains the auth-related API endpoint documentation
-└── ...      
+├── openapi.yaml        # The root OpenAPI document which imports all other YAML documents
+├── paths               # Each YAML file in a subdirectory corresponds to the definition of a specific API endpoint path
+│   └── ...
+└── schema              # Each YAML file consists of a reusable OpenAPI schema model (e.g. a User model)
+    └── ...
 ```
 
 CI/CD infrastructure to automatically lint OpenAPI documentation on push events, as well as automatically build and deploy documentation is also present.
