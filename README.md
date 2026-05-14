@@ -23,7 +23,7 @@ This repository contains the specifications and designs for our app
 ```
 
 The repository consists of 4 subdirectories, each describing a facet of the app's design
-- The `flows/` directory consists of the [user flows](https://www.figma.com/resource-library/user-flow/) which describe the usage of a certain aspect of the app. Progress can be viewed [here](https://github.com/theWatchMasters/specs/issues/1)
-- The `design/` directory contains the designs of crucial views and screens.
-- The `api/` directory contains the OpenAPI documents which store the interface details between the frontend and backend. Progress can be viewed [here](https://github.com/theWatchMasters/specs/issues/14)
-- The `infra/` directory consists of future deployment and infrastructure plans.
+- The [`flows/`](./flows/) directory consists of the [user flows](https://www.figma.com/resource-library/user-flow/) which describe the usage of a certain aspect of the app. Progress can be viewed [here](https://github.com/theWatchMasters/specs/issues/1)
+- The [`design/`](./design/) directory contains the designs of crucial views and screens.
+- The [`api/`](./api/) directory contains the OpenAPI documents which store the interface details between the frontend and backend. Progress can be viewed [here](https://github.com/theWatchMasters/specs/issues/14)
+- The [`infra/`](./infra/) directory consists of future deployment and infrastructure plans.
