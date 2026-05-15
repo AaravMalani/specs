@@ -22,6 +22,6 @@ api
     └── ...
 ```
 
-CI/CD infrastructure to automatically lint OpenAPI documentation on push events, as well as automatically build and deploy documentation is also present. 
+CI/CD infrastructure to automatically lint OpenAPI documentation on push events using [Spectral](https://github.com/stoplightio/spectral), as well as automatically build and deploy documentation is also present. 
 
 A Swagger UI deployment is present [here](https://thewatchmasters.github.io/specs/api/specs)

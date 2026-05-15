@@ -12,5 +12,5 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 24
-      - run: npm install -g ibm-openapi-validator
-      - run: lint-openapi api/openapi.yaml
+      - run: npm install -g spectral
+      - run: cd api && spectral lint openapi.yaml
