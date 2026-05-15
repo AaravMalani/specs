@@ -42,12 +42,12 @@ post:
               summary: An example with 2FA disabled
               value:
                 success: true
-                2fa_enabled: true
+                2fa_enabled: false
                 user: 
-                  id: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+                  id: bd564bf7-d13f-4fcd-a459-885436401f02
                   username: admin
                   email: admin@admin.org
-                  avatarId: c1edf4b2765dc314bcbc60c2ec925af5d584a9c6e2424fa4434cb6fad699c82b
+                  avatar_id: c1edf4b2765dc314bcbc60c2ec925af5d584a9c6e2424fa4434cb6fad699c82b
 
     "401":
       description: Invalid credentials
@@ -55,10 +55,10 @@ post:
         application/json:
           schema:
             $ref: "../schema/errors/InvalidCredentialError.yaml"
-      examples:
-        invalid_credentials:
-          summary: An example with invalid credentials
-          value:
-            success: false
-            message: "error.invalid_credentials"
-      
+        examples:
+          invalid_credentials:
+            summary: An example with invalid credentials
+            value:
+              success: false
+              message: "error.invalid_credentials"
+        

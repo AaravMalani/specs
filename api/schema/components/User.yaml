@@ -3,9 +3,8 @@ properties:
   id: 
     type: string
     format: uuid
-    minLength: 32
-    maxLength: 32
-    pattern: "^[a-f0-9]{32}$"
+    minLength: 36
+    maxLength: 36
   username: 
     type: string
     description: The username of the user
@@ -18,10 +17,10 @@ properties:
     format: email
     minLength: 6
     maxLength: 320
-  avatarId:
+  avatar_id:
     type: string
     description: The Gravatar ID of the user
-    minLength: 32
-    maxLength: 32
-    pattern: "^[a-f0-9]{32}$"
-required: [id, username, email, avatarId]
+    minLength: 64
+    maxLength: 64
+    pattern: "^[a-f0-9]{64}$"
+required: [id, username, email, avatar_id]
