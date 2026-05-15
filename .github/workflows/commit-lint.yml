@@ -12,5 +12,4 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 24
-      - run: npm install -g spectral
-      - run: cd api && spectral lint openapi.yaml
+      - run: cd api && npx spectral lint openapi.yaml
