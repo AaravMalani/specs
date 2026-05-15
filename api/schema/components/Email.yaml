@@ -1,0 +1,5 @@
+type: string
+description: The email of the user
+format: email
+minLength: 6
+maxLength: 320

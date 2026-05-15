@@ -26,7 +26,9 @@ tags:
   - name: auth
     description: Operations with this tag are related to authentication
 
-paths: {}
+paths: 
+  /login:
+    $ref: "./paths/login.yaml"
 
-components:
-  schemas: {}
+        
+            
