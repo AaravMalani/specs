@@ -1,5 +1,0 @@
-type: string
-description: The username of the user
-minLength: 4
-maxLength: 20
-pattern: "^[a-zA-Z_\\-0-9]*?$"
