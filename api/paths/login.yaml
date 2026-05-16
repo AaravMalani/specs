@@ -55,10 +55,10 @@ post:
         application/json:
           schema:
             $ref: "../schema/errors/InvalidCredentialError.yaml"
-        examples:
-          invalid_credentials:
-            summary: An example with invalid credentials
-            value:
-              success: false
-              message: "error.invalid_credentials"
+          examples:
+            invalid_credentials:
+              summary: An example with invalid credentials
+              value:
+                success: false
+                message: "error.invalid_credentials"
         
