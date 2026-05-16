@@ -29,6 +29,8 @@ tags:
 paths: 
   /login:
     $ref: "./paths/login.yaml"
+  /register:
+    $ref: "./paths/register.yaml"
 
         
             
