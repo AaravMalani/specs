@@ -5,18 +5,16 @@ post:
   summary: Allows credential pair registration
   description: |-
     The `/register` endpoint provides an interface for registration of new users 
-    using a traditional username, email and password based account creation
+    using a traditional email and password based account creation
   requestBody:
     content:
       application/json:
         schema: 
-          $ref: "../schema/requests/RegisterCredentials.yaml"
+          $ref: "../schema/requests/LoginCredentials.yaml"
         examples:
           example:
             summary: An example of registration
             value:
-              id: 
-              username: admin
               email: admin@admin.org
               password: abc123
           
@@ -35,7 +33,6 @@ post:
                 success: true
                 user: 
                   id: bd564bf7-d13f-4fcd-a459-885436401f02
-                  username: admin
                   email: admin@admin.org
                   avatar_id: c1edf4b2765dc314bcbc60c2ec925af5d584a9c6e2424fa4434cb6fad699c82b
                   

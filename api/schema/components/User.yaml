@@ -5,12 +5,6 @@ properties:
     format: uuid
     minLength: 36
     maxLength: 36
-  username: 
-    type: string
-    description: The username of the user
-    minLength: 4
-    maxLength: 20
-    pattern: "^[a-zA-Z_\\-0-9]*?$"
   email:
     type: string
     description: The email of the user
@@ -23,4 +17,4 @@ properties:
     minLength: 64
     maxLength: 64
     pattern: "^[a-f0-9]{64}$"
-required: [id, username, email, avatar_id]
+required: [id, email, avatar_id]

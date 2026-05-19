@@ -44,16 +44,18 @@ post:
                 2fa_enabled: false
                 user: 
                   id: bd564bf7-d13f-4fcd-a459-885436401f02
-                  username: admin
                   email: admin@admin.org
                   avatar_id: c1edf4b2765dc314bcbc60c2ec925af5d584a9c6e2424fa4434cb6fad699c82b
             success_new_account:
               summary: An example with a new account
               value:
                 success: true
+                2fa_enabled: false
                 acc_exists: false
-                access_token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNzc4ODYyODcyfQ.cu2YllHxsXs00RgMHaOwwFqDtOB7FbR32AtErT_ge18
-
+                user: 
+                  id: bd564bf7-d13f-4fcd-a459-885436401f02
+                  email: admin@admin.org
+                  avatar_id: c1edf4b2765dc314bcbc60c2ec925af5d584a9c6e2424fa4434cb6fad699c82b
     "401":
       description: Invalid credentials
       content:

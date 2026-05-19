@@ -1,19 +1,18 @@
 oneOf:
-  - type: object # Existing account, 2FA enabled
+  - type: object # Existing account, 2FA disabled or non-existent account
     properties:
       success:
         type: boolean
         enum: [true]
       acc_exists:
         type: boolean
-        enum: [true]
       2fa_enabled:
         type: boolean
         enum: [false]
       user:
         $ref: "../components/User.yaml"
     required: [success, acc_exists, 2fa_enabled, user]
-  - type: object # Existing account, 2FA disabled
+  - type: object # Existing account, 2FA enabled
     properties:
       success:
         type: boolean
@@ -27,14 +26,3 @@ oneOf:
       access_token:
         $ref: "../components/AccessToken.yaml"
     required: [success, acc_exists, 2fa_enabled, access_token]
-  - type: object # Non-existent account
-    properties:
-      success:
-        type: boolean
-        enum: [true]
-      acc_exists:
-        type: boolean
-        enum: [false]
-      access_token:
-        $ref: "../components/AccessToken.yaml"
-    required: [success, acc_exists, access_token]

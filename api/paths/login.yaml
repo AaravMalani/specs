@@ -5,18 +5,13 @@ post:
   summary: Allows credential pair login
   description: |-
     The `/login` endpoint provides an interface for user logins using
-    a username-password or email-password credential pair
+    an email-password credential pair
   requestBody:
     content:
       application/json:
         schema: 
           $ref: "../schema/requests/LoginCredentials.yaml"
         examples:
-          username-password:
-            summary: An example of credentials with username and password
-            value:
-              username: admin
-              password: abc123
           email-password:
             summary: An example of credentials with email and password
             value:
@@ -45,7 +40,6 @@ post:
                 2fa_enabled: false
                 user: 
                   id: bd564bf7-d13f-4fcd-a459-885436401f02
-                  username: admin
                   email: admin@admin.org
                   avatar_id: c1edf4b2765dc314bcbc60c2ec925af5d584a9c6e2424fa4434cb6fad699c82b
 
